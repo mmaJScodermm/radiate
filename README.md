@@ -1,6 +1,6 @@
-# radiate
+# iradiate
 
-`radiate` is a lightweight React state management library powered by RxJS `BehaviorSubject`.
+`iradiate` is a lightweight React state management library powered by RxJS `BehaviorSubject`.
 
 The library keeps store creation and subscription logic independent from React Context. If you want Context, you can pass the result of `useRadiateState` into your own provider.
 
@@ -14,7 +14,7 @@ The library keeps store creation and subscription logic independent from React C
 ## Install
 
 ```bash
-npm install radiate react
+npm install iradiate react
 ```
 
 For local development inside this repo:
@@ -27,7 +27,7 @@ npm run build
 ## Quick Start
 
 ```tsx
-import { useRadiateState } from "radiate";
+import { useRadiateState } from "iradiate";
 
 type CounterState = {
   count: number;
@@ -116,7 +116,7 @@ Alias of `useRadiateValue` for a shorter selector hook.
 
 ```tsx
 import { createContext, useContext } from "react";
-import { useRadiateState } from "radiate";
+import { useRadiateState } from "iradiate";
 
 type CounterState = {
   count: number;

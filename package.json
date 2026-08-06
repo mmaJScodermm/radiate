@@ -1,5 +1,5 @@
 {
-  "name": "radiate",
+  "name": "iradiate",
   "version": "0.1.0",
   "description": "A lightweight React state management library powered by RxJS BehaviorSubject.",
   "license": "MIT",
