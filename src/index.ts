@@ -1,10 +1,6 @@
+export { useRadiateState, useRadiateStore, useRadiateValue, useStore } from "./react";
+export { shallowEqual } from "./shallowEqual";
 export { createStore } from "./store";
-export {
-  useRadiateState,
-  useRadiateStore,
-  useRadiateValue,
-  useStore,
-} from "./react";
 
 export type {
   BoundStore,

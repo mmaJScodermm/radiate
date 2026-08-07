@@ -9,6 +9,7 @@ The library keeps store creation and subscription logic independent from React C
 - Tiny store core with a familiar `getState` / `setState` API
 - React-friendly state snapshots through `useState`
 - Direct RxJS access via `subject` and `state$`
+- Built-in `shallowEqual` for selector memo-like comparisons
 - First-class TypeScript support
 
 ## Install
@@ -106,6 +107,20 @@ Subscribes a component to a derived slice of store state.
 
 ```tsx
 const count = useRadiateValue(counterStore, (state) => state.count);
+```
+
+### `shallowEqual(previous, next)`
+
+Performs a shallow comparison for plain objects and arrays. This is useful when your selector returns a new object or array each time, but you only want to rerender when one of the top-level fields actually changes.
+
+```tsx
+import { shallowEqual, useRadiateValue } from "iradiate";
+
+const userInfo = useRadiateValue(
+  userStore,
+  (state) => ({ name: state.name, age: state.age }),
+  { equalityFn: shallowEqual },
+);
 ```
 
 ### `useStore(store, selector?, options?)`
